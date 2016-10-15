@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MVCDemo.Models.Department>
+
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                @foreach(var dept in Model)
+                {
+                    <li>
+                        @Html.ActionLink(dept.Name, "Details", "Departments", new { id = dept.DepartmentId }, null);
+                    </li>
+                }
+            </ul>
+               
+        </div>
